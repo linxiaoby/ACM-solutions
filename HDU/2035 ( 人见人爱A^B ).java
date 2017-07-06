@@ -10,7 +10,7 @@ public class Main {
         int s;
         s = qmod(a, b>>1, mod);
         s = s * s % mod;
-        if((b & 0x1) != 0) 
+        if((b & 1) != 0) 
             s = s * a % mod;
         return s;
     }
