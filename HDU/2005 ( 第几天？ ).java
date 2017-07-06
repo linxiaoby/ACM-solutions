@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Main {
@@ -18,14 +19,17 @@ public class Main {
             year = Integer.valueOf(strs[0]);
             month = Integer.valueOf(strs[1]);
             day = Integer.valueOf(strs[2]);
-            for (int i = 1; i < month; i++) {
-                if (judgeLeap(year)) {
+            if (judgeLeap(year)) {
+                for (int i = 1; i < month; i++) {
                     ans += leapMon[i];
-                } 
-                else {
+                }
+            }
+            else {
+                for (int i = 1; i < month; i++) {
                     ans += mon[i];
                 }
             }
+            
             ans += day;
             System.out.println(ans);
         }
