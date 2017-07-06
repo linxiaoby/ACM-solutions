@@ -1,1 +1,4 @@
-1. Java中List和Array的区别？
+1. List和Array的区别？
+2. pow的效率？
+3. 2011换行
+4. 右移1位vs除以2？
