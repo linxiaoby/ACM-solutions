@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Main {
@@ -5,8 +6,12 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n,tmp,a,b,c,d,e,sum = 0;
-        n = in.nextInt();
-        while(n != 0) {
+       
+        while(true) {
+            n = in.nextInt();
+            if(n == 0)
+                break;
+            
             sum = 0;
             for(int i = 0; i < n; i++) {
                 tmp = in.nextInt();
@@ -18,7 +23,6 @@ public class Main {
                 sum += tmp/100 + a/50 + b/10 + c/5 + d/2 + e;
             }
             System.out.println(sum);
-            n = in.nextInt();
         }
     }
 }

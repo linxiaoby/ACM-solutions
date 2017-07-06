@@ -23,9 +23,8 @@ public class Main {
             }
             for(int j = 0; j < m; j++) {
                 s2 = 0;
-                for(int i = 0; i < n; i++) {
+                for(int i = 0; i < n; i++) 
                     s2 += a[i][j];
-                }
                 avr2[j] = s2/n; 
             }
             
@@ -41,18 +40,16 @@ public class Main {
                     s++;
             }
             
-            for(int i = 0; i < n; i++){
-                if(i != 0)
-                    System.out.print(" ");
-                System.out.printf("%.2f", avr1[i]);
-            }
+            for(int i = 0; i < n - 1; i++)
+                System.out.printf("%.2f ", avr1[i]);
+            System.out.printf("%.2f",avr1[n - 1]);
             System.out.println();
-            for(int i = 0; i < m; i++) {
-                if(i != 0)
-                    System.out.print(" ");
-                System.out.printf("%.2f", avr2[i]);
-            }
+            
+            for(int i = 0; i < m - 1; i++) 
+                System.out.printf("%.2f ", avr2[i]);
+            System.out.printf("%.2f",avr2[m - 1]);
             System.out.println();
+            
             System.out.println(s);
             System.out.println();
         }

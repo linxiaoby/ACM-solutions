@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Main {
@@ -13,11 +14,11 @@ public class Main {
                 String s = strList[j];
                 char[] chs = s.toCharArray();
                 chs[0] = (char) (chs[0] - 32);
+                
                 if(j != 0)
                     System.out.print(" ");
-                for(int i = 0; i < chs.length; i++) {
+                for(int i = 0; i < chs.length; i++) 
                     System.out.print(chs[i]);
-                }
              }
             System.out.println();
         }

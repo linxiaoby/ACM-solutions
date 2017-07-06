@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Main {
@@ -6,10 +7,14 @@ public class Main {
         Scanner in = new Scanner(System.in);
         int n, m, tmp;
         int[] a = new int[100 + 3];
-        n = in.nextInt(); 
-        m = in.nextInt();
+        
         boolean flag;
-        while(n != 0 || m != 0) {
+        while(true) {
+            n = in.nextInt(); 
+            m = in.nextInt();
+            if(n == 0 && m == 0)
+                break;
+            
             flag = false;
             for(int i = 0; i <= n; i++) {
                 tmp = in.nextInt();
@@ -21,14 +26,9 @@ public class Main {
                 a[i] = tmp;    
             }
             
-            for(int i = 0; i < n + 1; i++) {
-                if(i != 0) 
-                    System.out.print(" ");
-                System.out.print(a[i]);
-            }
-            System.out.println();
-            n = in.nextInt(); 
-            m = in.nextInt();
+            for(int i = 0; i < n; i++)
+                System.out.print(a[i] + " ");
+            System.out.println(a[n]);
         }
     }
 }

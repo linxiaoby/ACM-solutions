@@ -26,7 +26,7 @@ public class Main {
                     }
                 }
                 if(flag)
-                System.out.println("yes");
+                    System.out.println("yes");
             }
         }
     }

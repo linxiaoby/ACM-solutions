@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -14,14 +15,14 @@ public class Main {
             ch = '0';
             list.clear();
             for(int i = 0; i < str.length(); i++) {
-                if(str.charAt(i) > ch) {
+                if(str.charAt(i) > ch) 
                     ch = str.charAt(i);
-                }
             }
             for(int i = 0; i < str.length(); i++) {
                 if(str.charAt(i) == ch)
                     list.add(i);
             }
+            
             for(int i = 0; i < str.length(); i++) {
                 System.out.print(str.charAt(i));
                 if(list.contains(i))
@@ -30,5 +31,4 @@ public class Main {
             System.out.println();
         }
     }
-
 }

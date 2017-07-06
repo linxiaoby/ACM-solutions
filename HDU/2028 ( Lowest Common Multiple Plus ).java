@@ -15,9 +15,8 @@ public class Main {
         while(in.hasNext()) {
             n = in.nextInt();
             L = in.nextInt();
-            for(int i = 1; i < n; i++) {
+            for(int i = 1; i < n; i++)
                 L = lcm(in.nextInt(), L);
-            }
             System.out.println(L);
         }
     }
