@@ -1,3 +1,9 @@
+若b为奇数：
+    a^b = a^(b - 1) * a;
+若b为偶数：
+    a^b = (a^(b/2))^2;
+
+
 import java.util.Scanner;
 
 public class Main {
