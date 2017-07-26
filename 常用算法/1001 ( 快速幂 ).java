@@ -9,7 +9,7 @@
 static int qmod(int a, int b) {
     	int res = 1;
     	while(b != 0) {
-    		if((b&1) == 1) res *= a;
+    		if((b & 1) == 1) res *= a;
     		b >>= 1;
     		a = a * a;
     	}
