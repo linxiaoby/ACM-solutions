@@ -8,3 +8,13 @@ static boolean judgePrime(int n) {
         }
         return flag;
     }
+
+【素数打表】
+static void primeTable() {
+		Arrays.fill(num, true);
+		int sq = (int)Math.sqrt(MAXN);
+		for(int i = 2; i < sq; i++) {
+			for(int j = i + i; j < MAXN; j += i) 
+				num[j] = false;
+		}
+	}    
