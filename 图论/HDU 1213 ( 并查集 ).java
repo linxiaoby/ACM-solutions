@@ -23,7 +23,7 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 		int T = in.nextInt();
 		int N, M;
-		while(T-- >= 0){
+		while(T-- > 0){
 			N = in.nextInt(); M = in.nextInt();
 			for(int i = 1; i <= N; i++)
 				p[i] = i;
