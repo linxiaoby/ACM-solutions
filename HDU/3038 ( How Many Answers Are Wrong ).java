@@ -15,22 +15,25 @@ public class Main {
 	
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		int N = in.nextInt(), M = in.nextInt();
-		Arrays.fill(p, 0, N + 1, -1); 
-		Arrays.fill(s, 0, N + 1, 0);
-		
-		int a, b, v, ans = 0;
-		while(M-- > 0) {
-			a = in.nextInt(); b = in.nextInt(); v = in.nextInt();
-			a--;
-			int x = find(a), y = find(b);
-			if(x != y) {   
-				p[y] = x;
-				s[y] = s[a] - s[b] + v;
+		int N, M;
+		while(in.hasNext()) {
+			N = in.nextInt(); M = in.nextInt();
+			Arrays.fill(p, 0, N + 1, -1); 
+			Arrays.fill(s, 0, N + 1, 0);
+			
+			int a, b, v, ans = 0;
+			while(M-- > 0) {
+				a = in.nextInt(); b = in.nextInt(); v = in.nextInt();
+				a--;
+				int x = find(a), y = find(b);
+				if(x != y) {   
+					p[y] = x;
+					s[y] = s[a] - s[b] + v;
+				}
+				else if(s[b] != s[a] + v) 
+					ans++;
 			}
-			else if(s[b] != s[a] + v) 
-				ans++;
+			System.out.println(ans);
 		}
-		System.out.println(ans);
 	}
 }
