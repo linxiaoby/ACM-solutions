@@ -1,4 +1,4 @@
-mport java.util.ArrayList;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -26,14 +26,14 @@ public class Main {
 	
 	static final int MAXN = 100 + 3;
 	static int[] p = new int[MAXN];
-	static List<Point> pt = new ArrayList<Point>();
-	static List<Edge> ed = new ArrayList<Edge>();
 	
 	static int find(int x) {
 		return p[x] == -1 ? x : (p[x] = find(p[x]));
 	}
 	
 	public static void main(String[] args) {
+		List<Point> pt = new ArrayList<Point>();
+		List<Edge> ed = new ArrayList<Edge>();
 		Scanner in = new Scanner(System.in);
 		int n;
 		while((n = in.nextInt()) != 0) {
@@ -51,14 +51,8 @@ public class Main {
 					p2 = pt.get(j);
 					dis = Math.sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y) 
 							      + (p1.z - p2.z) * (p1.z - p2.z));
-					if(dis <= p1.r + p2.r) {
-						p[i] = j;
-						w = 0;
-						cnt ++;
-					}
-					else 
-						w = dis - p1.r - p2.r;
-					ed.add(new Edge(i, j, w));	
+					w = (dis <= p1.r + p2.r ) ? 0 : (dis - p1.r - p2.r);
+					ed.add(new Edge(i, j, w));
 				}
 			}
 			
