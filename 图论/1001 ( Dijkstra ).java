@@ -1,5 +1,5 @@
 =====================
-【邻接矩阵】
+【POJ 2387 邻接矩阵】
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
