@@ -11,6 +11,7 @@
 	32位有符号整数最大值约为2e9
 	64位有符号整数最大值约为9e18
 
-
-	if(min(Ui) < max(Di) || min(Ri) < max(Li)) 该矩形不存在，即面积为0;
-else 该矩形面积为 (min(Ui)-max(Di))*(min(Ri)-max(Li));
+7.BufferedReader输入
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+String[] str = br.readLine().split(" ");
+int N = Integer.valueOf(str[0]), Q = Integer.valueOf(str[1]);
