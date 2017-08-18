@@ -24,7 +24,7 @@ public class Main {
 		static void build(int rt, int l, int r) {
 			no[rt] = new Node(l, r);
 			if(l == r) {
-				no[rt].sum = a[l];
+				no[rt].sum = in.nextInt();
 				return;
 			}
 			int m = (l + r) >> 1;
@@ -72,15 +72,12 @@ public class Main {
 	}
 	
 	static final int MAXN = 100000 + 5;
-	static int[] a = new int[MAXN];
 	
 	public static void main(String[] args)  {
 		Scanner in = new Scanner(System.in);
 		int N = in.nextInt(), Q = in.nextInt();
-		for(int i = 1; i <= N; i++) 
-			a[i] = in.nextInt();
-		
 		Tree.build(1, 1, N);
+		
 		while(Q-- > 0) {
 			char op = in.next().charAt(0);
 			if(op == 'C') 
