@@ -41,3 +41,56 @@ public class Main {
 		}
 	}
 }
+
+===========================================
+
+import java.util.Scanner;
+
+public class Main {
+	static final int MAXN = 8 + 3;
+	static int n, k, ans;
+	static char[][] G = new char[MAXN][MAXN];
+	static int[] c = new int[MAXN];
+	
+	static void dfs(int cur, int lev) {
+		if(cur == k) {
+			ans++;
+			return;
+		}
+		if(lev == n) return;
+		for(int i = 0; i <= n; i++) {
+			if(i == n) {
+				dfs(cur, lev + 1);
+				continue;
+			} 
+			if(G[lev][i] == '.') continue;
+			boolean ok = true;
+			for(int j = 0; j < cur; j++) {
+				if(c[j] % n == i) {
+					ok = false;
+					break;
+				}
+			}
+			if(ok) {
+				c[cur] = lev * n + i;
+				dfs(cur + 1, lev + 1);
+			}
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		while(in.hasNext()) {
+			n = in.nextInt(); k = in.nextInt();
+			if(n == -1 && k == -1) break;
+			for(int i = 0; i < n; i++) {
+				String tmp = in.next();
+				G[i] = tmp.toCharArray();
+			}
+			ans = 0;
+			dfs(0, 0);
+			System.out.println(ans);
+		}
+	}
+}
