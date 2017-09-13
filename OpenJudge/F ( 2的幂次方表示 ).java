@@ -25,3 +25,31 @@ public class Main {
 	}
 }
 
+=================
+import java.util.Scanner;
+
+public class Main {
+	
+	static String fun(int n) {
+		String str = "";
+		boolean first = true;
+		for(int i = 16; i >= 0; i--) {
+			if((n & (1 << i)) == 0) continue;
+			if(first) first = !first;
+			else str += "+";
+			if(i > 2) 
+				str += "2(" + fun(i) + ")";
+			else if(i == 1) 
+				str += "2";
+			else 
+				str += "2(" + i + ")";
+		}
+		return str;
+	}
+	
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		int n = in.nextInt();
+		System.out.println(fun(n));
+	}
+}
