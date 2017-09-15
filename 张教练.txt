@@ -17,3 +17,7 @@ String[] str = br.readLine().split(" ");
 int N = Integer.valueOf(str[0]), Q = Integer.valueOf(str[1]);
 
 x&(1<<k)是1或者0就可以判断x二进制表示的第k位是不是1
+
+8. 树状数组和线段树的单点修改和查询的复杂度 O(logn) 不都是一样大的吗，只是树状数组更好写一些，空间复杂度也更小。
+
+
