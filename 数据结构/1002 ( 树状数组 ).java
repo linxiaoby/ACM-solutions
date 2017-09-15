@@ -51,9 +51,12 @@ public class Main {
 				if(tmp[0].equals("End")) break;
 				
 				int a = Integer.valueOf(tmp[1]), b = Integer.valueOf(tmp[2]);
-				if(tmp[0].equals("Add")) BIT.modify(a, b, 1);
-				else if(tmp[0].equals("Sub")) BIT.modify(a, b, -1);
-				else System.out.println(BIT.sum(b) - BIT.sum(a - 1));	
+				if(tmp[0].equals("Add")) 
+					BIT.modify(a, b, 1);
+				else if(tmp[0].equals("Sub")) 
+					BIT.modify(a, b, -1);
+				else 
+					System.out.println(BIT.sum(b) - BIT.sum(a - 1));	
 			}
 		}
 	}
