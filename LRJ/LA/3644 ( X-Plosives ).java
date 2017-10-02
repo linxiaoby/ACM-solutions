@@ -19,7 +19,7 @@ public class Main {
 				b = in.nextInt();
 				int x = find(a), y = find(b);
 				if(x == y) ans++;
-				else p[a] = b;
+				else p[x] = y;
 			}
 			System.out.println(ans);
 		}
